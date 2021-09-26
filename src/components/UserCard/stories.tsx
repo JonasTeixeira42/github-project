@@ -7,8 +7,8 @@ export default {
   title: 'UserCard',
   component: UserCard,
   args: {
-    image: 'https://source.unsplash.com/random/100x100',
-    name: 'JonasTeixeira42',
+    avatar_url: 'https://source.unsplash.com/random/100x100',
+    login: 'JonasTeixeira42',
     id: '1'
   }
 } as Meta

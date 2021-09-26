@@ -4,16 +4,16 @@ import * as S from './styles'
 
 export type UserCardProps = {
   id?: string
-  name?: string
-  image?: string
+  login?: string
+  avatar_url?: string
 }
 
-const UserCard = ({ id = '', name = '', image = '' }: UserCardProps) => {
+const UserCard = ({ id = '', login = '', avatar_url = '' }: UserCardProps) => {
   return (
     <S.Wrapper>
-      <S.Image src={image} alt={name} />
+      <S.Image src={avatar_url} alt={login} />
       <S.Content>
-        <S.Name>{name}</S.Name>
+        <S.Name>{login}</S.Name>
         <S.Id>{id}</S.Id>
       </S.Content>
     </S.Wrapper>

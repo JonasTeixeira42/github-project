@@ -6,8 +6,8 @@ import { renderWithTheme } from 'utils/tests/helpers'
 import UserCard from '.'
 
 const props = {
-  image: 'https://source.unsplash.com/random/100x100',
-  name: 'JonasTeixeira42',
+  avatar_url: 'https://source.unsplash.com/random/100x100',
+  login: 'JonasTeixeira42',
   id: '1'
 }
 

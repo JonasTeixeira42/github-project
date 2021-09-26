@@ -7,12 +7,16 @@ import Routes from './routes'
 
 import theme from 'styles/theme'
 import GlobalStyles from 'styles/global'
+import { UserProvider } from 'hooks/use-users'
 
 const App = () => (
   <ThemeProvider theme={theme}>
     <BrowserRouter>
-      <Routes />
-      <ToastContainer autoClose={3000} />
+      <UserProvider>
+        <Routes />
+        <ToastContainer autoClose={3000} />
+      </UserProvider>
+
       <GlobalStyles />
     </BrowserRouter>
   </ThemeProvider>
