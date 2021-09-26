@@ -4,7 +4,11 @@ import media from 'styled-media-query'
 import * as HeadingStyles from 'components/Heading/styles'
 import * as PaginationStyles from 'components/Pagination/styles'
 
-export const Wrapper = styled.div``
+export const Wrapper = styled.div`
+  ${({ theme }) => css`
+    padding: ${theme.spacings.small};
+  `}
+`
 
 export const Main = styled.main`
   ${({ theme }) => css`

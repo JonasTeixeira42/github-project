@@ -9,6 +9,12 @@ export const Wrapper = styled.article`
     box-shadow: ${theme.shadow.default};
     border-radius: ${theme.border.radius};
     background: ${theme.colors.white};
+    cursor: pointer;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: translateY(-1rem);
+    }
   `}
 `
 
