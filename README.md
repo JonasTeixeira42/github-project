@@ -1,6 +1,4 @@
-# Medical Test
-
-This is a front-end project for doctors to keep track of their weekly schedule. In this project, the doctors will be able to check the appointments and detailed information about their patients.
+# Github Project
 
 ## What is inside:
 
