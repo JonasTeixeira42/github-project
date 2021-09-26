@@ -1,4 +1,5 @@
 import React from 'react'
+import userEvent from '@testing-library/user-event'
 import { screen } from '@testing-library/react'
 
 import { renderWithTheme } from 'utils/tests/helpers'
@@ -26,5 +27,16 @@ describe('<UserCard />', () => {
     ).toHaveAttribute('src', 'https://source.unsplash.com/random/100x100')
 
     expect(container.firstChild).toMatchSnapshot()
+  })
+
+  it('should fire a function when clicking', () => {
+    const onClick = jest.fn()
+    renderWithTheme(<UserCard {...props} onClick={onClick} />)
+
+    const block = screen.getByRole('heading', { name: /JonasTeixeira42/i })
+    userEvent.click(block)
+
+    expect(onClick).toHaveBeenCalledTimes(1)
+    expect(onClick).toHaveBeenCalledWith('JonasTeixeira42')
   })
 })
