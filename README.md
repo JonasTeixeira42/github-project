@@ -38,7 +38,7 @@ Open [http://localhost:8080](http://localhost:8080) with your browser to see the
 
 ## Commands
 
-- `dev`: runs your application on `localhost:3000`
+- `dev`: runs your application on `localhost:8080`
 - `build`: creates the production build version
 - `lint`: runs the linter in all components and pages
 - `test`: runs jest to test all components
