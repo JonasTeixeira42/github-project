@@ -1,19 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
 import Heading from 'components/Heading'
-import UserCard from 'components/UserCard'
+import Pagination from 'components/Pagination'
+import UserCard, { UserCardProps } from 'components/UserCard'
 
 import { useUsers } from 'hooks/use-users'
 
 import * as S from './styles'
 
 const Home = () => {
+  const [paginationUsers, setPaginationUsers] = useState<UserCardProps[]>([])
+
   const history = useHistory()
   const { users } = useUsers()
 
+  useEffect(() => {
+    const newUsers = users.slice(0, 8)
+
+    setPaginationUsers([...newUsers])
+  }, [users])
+
   const handleClick = (username: string) => {
     history.push(`details/${username}`)
+  }
+
+  const onChangePage = (startIndex: number, endIndex: number) => {
+    const newUsers = users.slice(startIndex, endIndex)
+
+    setPaginationUsers([...newUsers])
   }
 
   return (
@@ -22,7 +37,7 @@ const Home = () => {
         <Heading size="large">Users</Heading>
 
         <S.Section>
-          {users.map((user) => (
+          {paginationUsers.map((user) => (
             <UserCard
               key={user.id}
               id={user.id}
@@ -32,6 +47,11 @@ const Home = () => {
             />
           ))}
         </S.Section>
+        <Pagination
+          dataLength={users.length}
+          itemsPerPage={8}
+          onChangePage={(s, e) => onChangePage(s, e)}
+        />
       </S.Main>
     </S.Wrapper>
   )
