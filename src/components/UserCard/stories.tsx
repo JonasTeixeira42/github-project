@@ -9,7 +9,7 @@ export default {
   args: {
     avatar_url: 'https://source.unsplash.com/random/100x100',
     login: 'JonasTeixeira42',
-    id: '1'
+    id: 1
   }
 } as Meta
 

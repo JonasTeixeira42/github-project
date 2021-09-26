@@ -8,6 +8,7 @@ export const Wrapper = styled.article`
     padding: ${theme.spacings.medium};
     box-shadow: ${theme.shadow.default};
     border-radius: ${theme.border.radius};
+    background: ${theme.colors.white};
   `}
 `
 

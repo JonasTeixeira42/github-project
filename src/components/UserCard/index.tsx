@@ -3,12 +3,12 @@ import React from 'react'
 import * as S from './styles'
 
 export type UserCardProps = {
-  id?: string
+  id?: number
   login?: string
   avatar_url?: string
 }
 
-const UserCard = ({ id = '', login = '', avatar_url = '' }: UserCardProps) => {
+const UserCard = ({ id = 1, login = '', avatar_url = '' }: UserCardProps) => {
   return (
     <S.Wrapper>
       <S.Image src={avatar_url} alt={login} />
