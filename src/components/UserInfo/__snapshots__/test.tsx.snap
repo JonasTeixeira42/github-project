@@ -20,22 +20,6 @@ exports[`<UserInfo /> should render the component correctly 1`] = `
   margin-bottom: 2.4rem;
 }
 
-.c3 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1.6rem;
-  color: #3799ff;
-  padding-bottom: 0.2rem;
-  border-bottom: 0.1rem solid #3799ff;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.c3:hover {
-  color: #004d9d;
-  border-bottom: 0.1rem solid #004d9d;
-}
-
 <div
   class="c0"
 >
@@ -50,7 +34,7 @@ exports[`<UserInfo /> should render the component correctly 1`] = `
     UserTest
   </h2>
   <a
-    class="c3"
+    class=""
     href="https://www.google.com/"
     target="_blank"
   >
