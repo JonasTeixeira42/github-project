@@ -1,12 +1,17 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
 import { toast } from 'react-toastify'
 
-import { UserCardProps } from 'components/UserCard'
-
 import { getAllUsers } from 'services/requests/users'
 
+export type Users = {
+  id?: number
+  login?: string
+  avatar_url?: string
+  html_url?: string
+}
+
 type UserContextData = {
-  users: UserCardProps[]
+  users: Users[]
 }
 
 const UserContextDefaultValues = {
@@ -20,15 +25,16 @@ type UserProviderProps = {
 }
 
 const UserProvider = ({ children }: UserProviderProps) => {
-  const [users, setUsers] = useState<UserCardProps[]>([])
+  const [users, setUsers] = useState<Users[]>([])
 
   useEffect(() => {
     getAllUsers()
       .then((response) => {
-        const newUsers = response.data.map((user: UserCardProps) => ({
+        const newUsers = response.data.map((user: Users) => ({
           id: user.id,
           login: user.login,
-          avatar_url: user.avatar_url
+          avatar_url: user.avatar_url,
+          html_url: user.html_url
         }))
 
         setUsers([...newUsers])

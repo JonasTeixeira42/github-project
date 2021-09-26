@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UserInfo /> should render the component correctly 1`] = `
+.c0 {
+  background-color: #ffffff;
+  border-radius: 0.4rem;
+  box-shadow: 0px 3px 6px #00000029;
+  padding: 2.4rem;
+  color: #000000;
+}
+
+.c1 {
+  font-size: 1.6rem;
+  margin-bottom: 2.4rem;
+  color: #808080;
+}
+
+.c2 {
+  font-size: 1.6rem;
+  margin-bottom: 2.4rem;
+}
+
+.c3 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #3799ff;
+  padding-bottom: 0.2rem;
+  border-bottom: 0.1rem solid #3799ff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.c3:hover {
+  color: #004d9d;
+  border-bottom: 0.1rem solid #004d9d;
+}
+
+<div
+  class="c0"
+>
+  <h3
+    class="c1"
+  >
+    1
+  </h3>
+  <h2
+    class="c2"
+  >
+    UserTest
+  </h2>
+  <a
+    class="c3"
+    href="https://www.google.com/"
+    target="_blank"
+  >
+    Go to profile
+  </a>
+</div>
+`;
