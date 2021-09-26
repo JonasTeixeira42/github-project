@@ -8,14 +8,17 @@ import Routes from './routes'
 import theme from 'styles/theme'
 import GlobalStyles from 'styles/global'
 import { UserProvider } from 'hooks/use-users'
+import { RepositoryProvider } from 'hooks/use-repositories'
 
 const App = () => (
   <ThemeProvider theme={theme}>
     <HashRouter>
-      <UserProvider>
-        <Routes />
-        <ToastContainer autoClose={3000} />
-      </UserProvider>
+      <RepositoryProvider>
+        <UserProvider>
+          <Routes />
+          <ToastContainer autoClose={3000} />
+        </UserProvider>
+      </RepositoryProvider>
 
       <GlobalStyles />
     </HashRouter>
