@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Pagination /> should render the Pagination correctly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c1 {
+  font-size: 1.6rem;
+  color: #ffffff;
+  border: 0;
+  outline: 0;
+  padding: 0.8rem 1.4rem;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  background-color: #3799ff;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+  background-color: #9dcdff;
+}
+
+.c2 {
+  font-size: 1.4rem;
+}
+
+<div
+  class="c0"
+>
+  <div>
+    <button
+      class="c1"
+      disabled=""
+    >
+      Previous
+    </button>
+  </div>
+  <p
+    class="c2"
+  >
+    1 of 2
+  </p>
+  <div>
+    <button
+      class="c1"
+    >
+      Next
+    </button>
+  </div>
+</div>
+`;
