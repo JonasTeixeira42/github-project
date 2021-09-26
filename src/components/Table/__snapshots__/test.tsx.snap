@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Table /> should render the table correctly 1`] = `
+.c0 {
+  border: 0.1rem solid #f0f0f0;
+  border-radius: 0.4rem;
+  padding: 0.8rem;
+}
+
+.c1 {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+
+.c1:not(:last-child) {
+  border-bottom: 0.1rem solid #f0f0f0;
+  padding-bottom: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.c2 {
+  font-size: 1.4rem;
+  padding: 0 0.5rem;
+}
+
+.c3 {
+  font-size: 1.6rem;
+}
+
+<div
+  class="c0"
+  role="table"
+>
+  <div
+    class="c1"
+    role="rowgroup"
+  >
+    <div
+      class="c2"
+      role="cell"
+    >
+      <h2
+        class="c3"
+      >
+        Id
+      </h2>
+    </div>
+    <div
+      class="c2"
+      role="cell"
+    >
+      <h2
+        class="c3"
+      >
+        Repository
+      </h2>
+    </div>
+    <div
+      class="c2"
+      role="cell"
+    >
+      <h2
+        class="c3"
+      >
+        URL
+      </h2>
+    </div>
+  </div>
+  <div
+    class="c1"
+    role="rowgroup"
+  >
+    <div
+      class="c2"
+      role="cell"
+    >
+      1
+    </div>
+    <div
+      class="c2"
+      role="cell"
+    >
+      Repo 1
+    </div>
+    <div
+      class="c2"
+      role="cell"
+    >
+      <a
+        class=""
+        href="https://www.google.com/"
+        target="_blank"
+      >
+        Go to repository
+      </a>
+    </div>
+  </div>
+</div>
+`;
