@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
+import Table from 'components/Table'
 import Heading from 'components/Heading'
 import UserInfo from 'components/UserInfo'
 
@@ -31,17 +32,24 @@ const Details = () => {
 
   return (
     <S.Wrapper>
-      <S.Section>
-        <Heading size="large">User Details</Heading>
+      <S.Main>
+        <S.Section>
+          <Heading size="large">User Details</Heading>
 
-        {!!user?.id && (
-          <UserInfo id={user.id} login={user.login} html_url={user.html_url} />
-        )}
-      </S.Section>
+          {!!user?.id && (
+            <UserInfo
+              id={user.id}
+              login={user.login}
+              html_url={user.html_url}
+            />
+          )}
+        </S.Section>
 
-      {repositories.map((repository) => (
-        <h1 key={repository.id}>{repository.name}</h1>
-      ))}
+        <S.SectionRepositories>
+          <Heading size="normal">Repositories</Heading>
+          <Table repositories={repositories} />
+        </S.SectionRepositories>
+      </S.Main>
     </S.Wrapper>
   )
 }
